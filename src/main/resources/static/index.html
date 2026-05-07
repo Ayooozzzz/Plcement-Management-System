@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PS</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+  const user = JSON.parse(localStorage.getItem("user"));
+
+if (user && window.location.pathname !== "/index.html") {
+  window.location.href = user.role === "ADMIN" ? "admin.html" : "dashboard.html";
+}
+</script>
+</head>
+
+<body>
+
+<div class="topbar">
+  <div class="admin-btn" onclick="toggleAdminMenu()">ADMIN</div>
+<div class="logo">JIMS NEXUS</div>
+</div>
+<div id="adminMenu" class="admin-menu">
+  <button onclick="adminLogin()">Admin Login</button>
+  
+</div>
+
+<!-- HERO ----->
+<section class="hero">
+  <div class="hero-content">
+  <p class="badge">Placement Cell 2026</p>
+
+  <h1>
+    CAMPUS <br>
+PLACEMENT <br>
+<span>SYSTEM</span>
+  </h1>
+
+ <p class="hero-sub">
+Built for precision-driven campus hiring. One unified system where students,
+recruiters, and admins operate with clarity, speed, and zero chaos.
+</p>
+
+  <div class="hero-buttons">
+    <button class="primary" onclick="window.location.href='slogin.html'">Student Login</button>
+    <button onclick="goRecruiter()">Recruiter Portal</button>
+  </div>
+</div>
+</section>
+
+<section class="about">
+  <div class="about-box">
+
+    <div class="left">
+      <h1>BUILDING<br>CAREERS,<br>NOT JUST PLACEMENTS</h1>
+      <p class="tag">Since 1993</p>
+    </div>
+
+    <div class="right">
+     <p>
+A system built for real outcomes — not spreadsheets.  
+From first application to final offer, everything flows  
+in one controlled, transparent pipeline.
+</p>
+
+      <div class="stats-box">
+        <div>
+          <h2>90%</h2>
+          <p>Placement Rate</p>
+        </div>
+
+        <div>
+          <h2>300+</h2>
+          <p>Partner Companies</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <h2>Platform Capabilities</h2>
+
+  <div class="cards">
+    <div class="card">
+  <h3>Precision Listings</h3>
+  <p>Targeted roles filtered by eligibility, not guesswork.</p>
+</div>
+    <div class="card">
+  <h3>Easy Applications</h3>
+  <p>Streamlined application process for students.</p>
+</div>
+    <div class="card">
+  <h3>Recruiter Dashboard</h3>
+  <p>Comprehensive view of all applications and candidates.</p>
+</div>
+    <div class="card">
+  <h3>Real-Time Tracking</h3>
+  <p>Instant updates on application status and hiring progress.</p>
+</div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="workflow">
+
+  <h2>WORKFLOW</h2>
+
+  <div class="workflow-line"></div>
+
+  <div class="workflow-container">
+
+    <div class="wf-card">
+      <span>01</span>
+      <h3>Profile Setup</h3>
+      <p>Create your identity. Get verified. Enter the system.</p>
+    </div>
+
+    <div class="wf-card">
+      <span>02</span>
+      <h3>Opportunity Match</h3>
+      <p>Smart filtering connects you to the right roles.</p>
+    </div>
+
+    <div class="wf-card">
+      <span>03</span>
+      <h3>Live Tracking</h3>
+      <p>Monitor progress from application to shortlist.</p>
+    </div>
+
+    <div class="wf-card">
+      <span>04</span>
+      <h3>Final Selection</h3>
+      <p>Secure offers with real-time updates.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- STATS -->
+<section class="stats">
+
+  <div class="stat-box">
+    <h2>80+</h2>
+    <p>Students Registered</p>
+  </div>
+
+  <div class="stat-box">
+    <h2>8</h2>
+    <p>Placement Domains</p>
+  </div>
+
+  <div class="stat-box">
+    <h2>50+</h2>
+    <p>Applications Processed</p>
+  </div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Start Your Journey Today</h2>
+  <button onclick="goStudent()">Get Started</button>
+</section>
+
+
+
+<footer class="footer">
+  <p>© 2026 JIMS NEXUS. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

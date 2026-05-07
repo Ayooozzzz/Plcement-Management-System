@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="admin-panel-btn" onclick="goStudent()">HOME</div>
+
+  <div style="display:flex; align-items:center; gap:20px;">
+    <button onclick="logout()" class="logout-btn">Logout</button>
+    <div class="logo">JIMS NEXUS</div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="dashboard-container">
+
+  <!-- DASHBOARD -->
+  <div id="stats" class="section active">
+    <h2 class="dashboard-title">JIMS NEXUS ADMIN</h2>
+
+    <div class="admin-panel-menu">
+      <button onclick="showSection('stats')">Dashboard</button>
+      <button onclick="showSection('jobs')">All Jobs</button>
+      <button onclick="showSection('applications')">Applicants</button>
+    </div>
+
+    <div class="cards-simple">
+      <div class="simple-card">
+  <h3>Total Jobs</h3>
+  <p id="totalJobs">500+</p>
+</div>
+
+<div class="simple-card">
+  <h3>Selected Students</h3>
+  <p id="selectedStudents">400+</p>
+</div>
+
+<div class="simple-card">
+  <h3>Company Partnerships</h3>
+  <p id="companies">300+</p>
+</div>
+    </div>
+  </div>
+
+ 
+  <div id="jobs" class="section" style="display:none;">
+    <h2 class="dashboard-title">All Jobs</h2>
+    <button class="back-btn" onclick="showSection('stats')">← Back</button>
+    <div id="adminJobs"></div>
+  </div>
+
+  <!-- APPLICATIONS SECTION -->
+  <div id="applications" class="section" style="display:none;">
+  <h2 class="dashboard-title">Applicants</h2>
+  <button class="back-btn" onclick="showSection('stats')">← Back</button>
+
+  <table style="width:80%; margin:auto; border-collapse: collapse;">
+    <thead>
+      <tr style="color:#facc15;">
+        <th>Name</th>
+        <th>Semester</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Applied For</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody id="applicationsData"></tbody>
+  </table>
+</div>
+
+
+<script src="script.js"></script>
+ 
+<script>
+  checkAuth("ADMIN");
+</script>
+</body>
+</html>

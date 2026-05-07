@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Profile</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+window.onload = loadProfile;
+</script>
+  <script>checkAuth("STUDENT");</script>
+</head>
+
+<body>
+
+<div class="topbar">
+  <div class="admin-btn" onclick="goToDashboard()">HOME</div>
+  <div class="logo">JIMS NEXUS</div>
+</div>
+
+<div class="dashboard-container">
+  <button class="back-btn" onclick="goToDashboard()">← Back</button>
+
+  <h2 class="dashboard-title">Student Profile</h2>
+
+  <div class="login-box">
+
+    <input id="name" placeholder="Name">
+    <input id="email" placeholder="Email">
+    <input id="phone" placeholder="Phone">
+    <input id="dob" type="date">
+    <input id="enrollment" placeholder="Enrollment">
+    <input id="resume" placeholder="Resume URL (.pdf)">
+
+    <button onclick="saveProfile()">Save</button>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

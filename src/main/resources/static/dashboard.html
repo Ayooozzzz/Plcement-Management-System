@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+
+<div class="topbar">
+<div class="admin-btn" onclick="window.location.href='index.html'">HOME</div>
+
+  <div style="display:flex; align-items:center; gap:20px;">
+    
+    <div class="profile-box" onclick="toggleProfile()">
+    Profile
+      <div id="profileMenu" class="profile-menu">
+       <button onclick="editProfile()">Edit</button>
+        <button onclick="logout()">Logout</button>
+      </div>
+    </div>
+
+    <div class="logo">JIMS NEXUS</div>
+  </div>
+</div>
+
+
+<div class="dashboard-container">
+
+  <h2 class="dashboard-title">Available Jobs</h2>
+
+  <!-- FILTER -->
+  <div class="action-bar">
+    <button onclick="filterJobs('ALL')">All</button>
+    <button onclick="filterJobs('Software')">Software</button>
+    <button onclick="filterJobs('Cyber')">Cyber Security</button>
+  </div>
+
+  <!-- JOBS -->
+  <div id="jobs"></div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+<button onclick="loadJobs()">Refresh Jobs</button>
+
+<script>
+  checkAuth("STUDENT");
+</script>
+</body>
+
+</html>

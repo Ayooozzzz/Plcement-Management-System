@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="topbar">
+  <div class="admin-btn" onclick="goStudent()">HOME</div>
+  <div class="logo">JIMS NEXUS</div>
+</div>
+
+<section class="hero">
+  <div class="hero-content login-box">
+
+    <h2 id="formTitle">Login</h2>
+
+<div id="loginForm">
+  <input id="email" placeholder="Email">
+  <input id="password" type="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+</div>
+
+<div id="registerForm" style="display:none;">
+  <input id="name" placeholder="Name">
+  <input id="emailReg" placeholder="Email">
+  <input id="passwordReg" type="password" placeholder="Password">
+
+  <select id="role">
+    <option value="STUDENT">Student</option>
+    
+    
+  </select>
+
+  <button onclick="registerUser()">Register</button>
+</div>
+<p onclick="window.location.href='forgot.html'" class="login-link" id="toggleText">
+   forget password? 
+</p>
+<p onclick="toggleForm()" class="login-link" id="toggleText">
+  Don't have an account? Register
+</p>
+  </div>
+</section>
+
+
+</body>
+<script src="script.js"></script>
+</html>

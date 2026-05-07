@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reset Password</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="topbar">
+  <div class="admin-btn" onclick="goStudent()">HOME</div>
+  <div class="logo">JIMS NEXUS</div>
+</div>
+
+<section class="hero">
+  <div class="hero-content login-box">
+
+    <h2>Reset Password</h2>
+
+    <input id="enrollment" placeholder="Enrollment Number">
+    <input id="email" placeholder="Email">
+    <input id="newPassword" type="password" placeholder="New Password">
+
+    <button onclick="resetPassword()">Submit</button>
+   <p onclick="toggleForm()" class="login-link" id="toggleText">
+  Don't have an account? Register
+
+  </div>
+</section>
+
+
+</body>
+<script src="script.js"></script>
+</html>
